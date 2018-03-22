@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="26M-qX-cWK">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Holidays-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AdaptivePresentationsTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp1-Cf-14g">
+                                <rect key="frame" x="129.5" y="318" width="115" height="30"/>
+                                <state key="normal" title="Holiday Greeting"/>
+                                <connections>
+                                    <action selector="HolidayGreetingButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k2L-pJ-Pa7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yp1-Cf-14g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dp1-5K-kYQ"/>
+                            <constraint firstItem="yp1-Cf-14g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wMJ-8y-80q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Holidays" id="jOq-N2-mHN">
+                        <barButtonItem key="rightBarButtonItem" title="App Info" id="VQs-5e-PmQ">
+                            <connections>
+                                <action selector="showPopOverButtonTapped:" destination="BYZ-38-t0r" id="IVN-2V-NUU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="689" y="142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9Wm-N7-66h">
+            <objects>
+                <viewController storyboardIdentifier="InformationViewController" id="kWx-at-JMS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sv6-hL-VhB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HJZ-VQ-fJq">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">The application prints a holiday greeting in the console when the holiday greeting button is tapped, and the user selects the "Yes" option.  </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="emM-fb-hF7" firstAttribute="bottom" secondItem="HJZ-VQ-fJq" secondAttribute="bottom" id="9IL-JR-Mb1"/>
+                            <constraint firstItem="HJZ-VQ-fJq" firstAttribute="top" secondItem="emM-fb-hF7" secondAttribute="top" id="FfY-6N-7f9"/>
+                            <constraint firstItem="HJZ-VQ-fJq" firstAttribute="trailing" secondItem="emM-fb-hF7" secondAttribute="trailing" id="IOQ-Oh-1Cm"/>
+                            <constraint firstItem="HJZ-VQ-fJq" firstAttribute="leading" secondItem="emM-fb-hF7" secondAttribute="leading" id="LQ3-gs-6wW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="emM-fb-hF7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mEi-vo-fkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1406" y="141"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hvf-SP-2qo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="26M-qX-cWK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="23U-Xa-Kki">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="d7P-zb-yQb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ueg-yt-8oQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="142"/>
+        </scene>
+    </scenes>
+</document>
